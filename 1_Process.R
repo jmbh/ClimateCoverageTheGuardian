@@ -40,6 +40,8 @@ ai_handle <- "7.0.2-Mistral-Large-"
 data_cmpl <- readRDS(paste0("Files/Guard_RawData_With_WordCount", ai_handle, ".RDS"))
 dim(data_cmpl)
 
+sum(table(data_cmpl$year))
+
 
 # --------------------------------------------
 # --------- Processing JSON ------------------

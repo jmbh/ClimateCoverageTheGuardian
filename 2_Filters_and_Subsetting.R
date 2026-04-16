@@ -132,6 +132,13 @@ prop.table(tb) |> round(3)
 tb <- table(data_bin_ss_no_BM$mainly_climate_change)
 prop.table(tb) |> round(4)
 
+nrow(data_bin_ss_no_BM) * 0.1635 
+
+table(data_bin_ss_no_BM$year)
+table(data_bin_ss_mainly$year)
+table(data_bin$year)
+sum(table(data_bin$year))
+
 
 # --------------------------------------------
 # --------- Save Filtered Data ---------------
