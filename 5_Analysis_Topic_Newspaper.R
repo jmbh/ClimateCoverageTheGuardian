@@ -26,7 +26,7 @@ library(plyr)
 library(RColorBrewer)
 
 source("0_Helpers.R") 
-source("5_Plotting_Meta.R") # For labels, colors, item selection, etc
+source("3_Plotting_Meta.R") # For labels, colors, item selection, etc
 
 
 # --------------------------------------------
@@ -148,14 +148,19 @@ dim(m_props_Germany)
 m_props_combined <- rbind(m_props_Germany, v_props_Guardian_no25[, 1])
 v_ran <- list(1:7, 8:14, 15:21, 22:28)
 
+# Change order, to keep left-right alignment
+outlets_wG_reord <- outlets_wG[c(8, 1:7)]
+cols_wG_reord <- cols_wG[c(8, 1:7)]
+m_props_combined_reord <- m_props_combined[c(8, 1:7), ]
+
 pdf(paste0("Figures/Fig_G_barplots_2x2_", filter, "_withGerman.pdf"), width=10*sc, height=7.2*sc)
 
 par(mfrow=c(2,2))
-for(i in 1:4)   Plot1Barplot_Tab(tab_i = as.matrix(m_props_combined[, v_ran[[i]]]), 
+for(i in 1:4)   Plot1Barplot_Tab(tab_i = as.matrix(m_props_combined_reord[, v_ran[[i]]]), 
                                  ind_qu = l_labels_P[[i]], 
                                  labels_qu = l_indP_lab_lb[[i]], 
-                                 cols = cols_wG,
-                                 outlets = outlets_wG,
+                                 cols = cols_wG_reord,
+                                 outlets = outlets_wG_reord,
                                  legend = c(0,1,0,0)[i], 
                                  title = paste0(v_cats[i]), 
                                  ymax=90, 
