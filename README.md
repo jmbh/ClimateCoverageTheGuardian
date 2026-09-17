@@ -13,6 +13,7 @@ We took a stratified (by year) sample from these 92,221 articles and sent them t
 - `4_Analysis_Time_Quarterly.R` aggregates the AI responses to the quarterly level and produdes Figure 1 in the paper and Figure S1 in the appendix. This script also normalizes the proportions of articles reporting on a given aspect using the total number of articles with the keyword "climate" (accounting for the fact that we ran the AI only on a subset of all available data) and using the total number of articles published in The Guardian in a given quarter. The former is provided in the RDS file `Guard_Total_noAI.RDS`. This file contains all the articles in `Files/articles.csv`, but with irrelevant articles filtered out (see paper).The latter information is provided via the CSV `guardian_monthly_counts.csv` in the folder `Files`.
 - `5_Analysis_Topic_Newspaper.R` aggregates the AI responses to the newspaper level and produces Figure 2 in the paper and various appendix figures. This script also compares the results from The Guardian to a recent paper analyzing the same variables in Germany. The German data is provided with the file `Datasum_prop_2x2_mainly_7.0.2-Mistral-Large-.RDS` in folder `Files`
 - `6_Analysis_Correlational.R` produces the correlational analysis shown in the appendix
+- `7_Analysis_Validation.R` produces the validation analysis shown in the appendix, drawing on `Files/human_validation.csv` and `Files/validation_results.csv`
+- `8_Example_Articles.R` looks at a few example articles to get a sense of what the AI does
 
-The script `utils/guardian_get_daily_counts.py` queries the total number
-of articles published per day/month.
+The script `utils/guardian_get_daily_counts.py` queries the total number of articles published per day/month; `utils/sample_articles.R` selects articles from The Guardian corpus for validation and saves it as `Files/validation_guardian_articles.csv`; and `utiles/validation_prep.R` prepares the validation files.
