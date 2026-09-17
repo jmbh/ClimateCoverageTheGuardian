@@ -16,7 +16,7 @@ figV <- ""
 # --------- Labels and Colors ----------------
 # --------------------------------------------
 
-cols <- c("#d62728", "#0072B2", "#029E73", "#E69F00", "#ff7f0e", "#CC79A7", "#56B4E9")
+cols_val <- c("#d62728", "#0072B2", "#029E73", "#E69F00", "#ff7f0e", "#CC79A7", "#56B4E9")
 cols <- "#052962" # which is The Guardian blue
 outlets = c("taz.de", "zeit.de", "spiegel.de", "sueddeutsche.de", "faz.net", "welt.de", "bild.de")
 n_outlets <- length(outlets)

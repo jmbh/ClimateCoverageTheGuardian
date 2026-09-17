@@ -137,15 +137,7 @@ Plot1Barplot <- function(data,
              col="grey")
   }
   
-  
-  
-  
-  # ## Version Double Line
-  # par(mgp = c(3, 1.5, 0)) 
-  # axis(1, at=colMeans(bp), labels=labels_qu, las=1, cex.axis=0.75)
-  # par(mgp = c(3, 1, 0)) 
-  
-  ## Version Doube line Force
+  ## Version Double line Force
   axis(1, at=colMeans(bp), labels=FALSE, las=1, cex.axis=0.75)
   text(
     x = colMeans(bp),
